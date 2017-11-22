@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
   "name": "Recipe Filter",
-  "version": "0.1",
+  "version": "0.2",
   "content_scripts": [
     {
       "matches": [
         "http://*/*", "https://*/*"
       ],
-      "css": ["recipe_filter.css"],
-      "js": ["jquery-3.2.1.min.js", "content.js"]
+      "css": ["css/recipe_filter.css"],
+      "js": ["js/jquery-3.2.1.min.js", "js/main.js"]
     }
   ]
 }
