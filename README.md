@@ -1,4 +1,4 @@
-## Recipe Filter Chrome Extension
+## RecipeFilter Chrome Extension
 
 This Chrome plugin helps cut through to the chase when browsing food blogs. It is born out of my frustration in having to scroll through a prolix life story before getting to the recipe card that I really want to check out.
 
@@ -8,9 +8,17 @@ It works by identifying recipes in websites that conform to some common patterns
 
 ### Installing
 
+The fastest way to try it out is to directly install the latest CRX from Github [by clicking here](https://raw.githubusercontent.com/sean-public/RecipeFilter/master/RecipeFilter.crx).
+
 Once out of beta testing, you will be able to install from the [Google Web Store](https://chrome.google.com/webstore/category/extensions).
 
-The fastest way to try it out is to directly install the latest CRX from Github [by clicking here](https://raw.githubusercontent.com/sean-public/RecipeFilter/master/RecipeFilter.crx).
+
+
+### How it Works
+
+The extension quickly checks for the presence of a few common `div` classes and `itemtypes` that are used on recipe cards. If it finds a single recipe on the page, it displays it at the top in a cloned element with the rest of the page dimmed in the background.
+
+It preserves the formatting, images, and styling of the original recipe card as closely as possible; it doesn't try to "sanitize" or reformat the recipe.
 
 
 
@@ -24,5 +32,8 @@ Fork this repo and load it as an unpacked extension. Push your changes and submi
 - It's installed and running! Load a long-winded recipe page to test it out ([example](https://www.gimmesomeoven.com/instant-pot-steamed-artichokes/))
 - As you make changes, just hit "refresh" on the Extensions settings page to reload the plugin.
 
+### 
 
+### Example Screenshots
 
+![before and after screenshots](img/before and after.png)

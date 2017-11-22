@@ -10,7 +10,7 @@ recipe_selectors = [
 
 recipe_selectors.every(function(s){
 	$r = $(s);
-	if ($r.length){
+	if ($r.length === 1){
 		$r.clone().attr('id', '_rf_highlight').prependTo('body').append(`
 			<div id="_rf_header">
 				<button id="_rf_closebtn">close recipe filter</button>
