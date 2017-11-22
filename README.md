@@ -36,4 +36,4 @@ Fork this repo and load it as an unpacked extension. Push your changes and submi
 
 ### Example Screenshots
 
-![before and after screenshots](img/before and after.png)
+![before and after screenshots](img/before_and_after.png)
