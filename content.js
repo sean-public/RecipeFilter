@@ -4,6 +4,7 @@ recipe_selectors = [
 	'.recipe-callout',
 	'.tasty-recipes',
 	'.easyrecipe',
+	'.innerrecipe',
 ]
 
 
