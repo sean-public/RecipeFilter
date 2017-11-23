@@ -1,3 +1,5 @@
+![](src/img/icon-128.png)
+
 ## RecipeFilter Chrome Extension
 
 This Chrome plugin helps cut through to the chase when browsing food blogs. It is born out of my frustration in having to scroll through a prolix life story before getting to the recipe card that I really want to check out.
