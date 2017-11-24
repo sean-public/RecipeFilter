@@ -5,6 +5,7 @@
   "icons": {
           "128": "img/icon-128.png"
   },
+  "permissions": [ "storage" ],
   "content_scripts": [
     {
       "matches": [

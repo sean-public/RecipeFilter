@@ -22,6 +22,8 @@ The extension quickly checks for the presence of a few common `div` classes and 
 
 It preserves the formatting, images, and styling of the original recipe card as closely as possible; it doesn't try to "sanitize" or reformat the recipe.
 
+Buttons are added to the recipe card to control the extension. You can choose to close the popup or blacklist the site entirely so the extension will no longer try to call out recipes on the current domain.
+
 
 
 ### Developing & Contributing
