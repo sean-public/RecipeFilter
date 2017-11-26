@@ -22,14 +22,9 @@ function showPopup(){
 				</div>
 			`).fadeIn(500);
 
-			$('#_rf_closebtn').click(function(b){
-				hidePopup();
-			});
-			
+			$('#_rf_closebtn').click(hidePopup);
 			$('#_rf_disablebtn').click(function(b){
-				chrome.storage.sync.set({[document.location.hostname]: true}, function(){
-					hidePopup();
-				});
+				chrome.storage.sync.set({[document.location.hostname]: true}, hidePopup);
 			});
 			return false;	// it worked, stop iterating through recipe_selectors
 		}
