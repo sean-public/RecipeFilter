@@ -6,6 +6,7 @@
           "128": "img/icon-128.png"
   },
   "permissions": [ "storage" ],
+  "options_page": "html/options.html",
   "content_scripts": [
     {
       "matches": [
