@@ -5,6 +5,7 @@ recipe_selectors = [
 	'.tasty-recipes',
 	'.easyrecipe',
 	'.innerrecipe',
+	'.wprm-recipe-container',
 ]
 
 function hidePopup(){
