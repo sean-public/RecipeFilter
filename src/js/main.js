@@ -1,11 +1,12 @@
 recipe_selectors = [
-	'div[itemtype="http://schema.org/Recipe"]',
-	'div[itemtype="https://schema.org/Recipe"]',
 	'.recipe-callout',
 	'.tasty-recipes',
 	'.easyrecipe',
 	'.innerrecipe',
 	'.wprm-recipe-container',
+	'.recipe-content',
+	'div[itemtype="http://schema.org/Recipe"]',
+	'div[itemtype="https://schema.org/Recipe"]',
 ]
 
 function hidePopup(){
@@ -39,3 +40,4 @@ chrome.storage.sync.get(document.location.hostname, function(items) {
 		showPopup();
 	}
 });
+
