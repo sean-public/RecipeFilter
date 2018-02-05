@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Recipe Filter",
-  "version": "0.2",
+  "version": "0.1",
   "icons": {
           "128": "img/icon-128.png"
   },
