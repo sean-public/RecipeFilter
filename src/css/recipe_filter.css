@@ -17,8 +17,17 @@
 	display: block;
 	padding: 8px;
 	margin: 0;
-	color: white;
-	background: rgba(200, 0, 0, 0.2);
+	color: rgba(100, 200, 100, 0.7);
+	background: rgba(100, 200, 100, 0.3);
 	font-size: 14px;
 	font-weight: bold;
+	text-align: center;
+}
+
+._rfbtn {
+	color: black;
+	font-size: 100%;
+	background-color: #eee;
+	padding: 2px 8px;
+	margin: 0 8px;
 }

@@ -1,12 +1,20 @@
 {
   "manifest_version": 2,
   "name": "Recipe Filter",
+  "short_name": "Recipe Filter",
   "version": "0.1",
   "icons": {
           "128": "img/icon-128.png"
   },
-  "permissions": [ "storage" ],
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
   "options_page": "html/options.html",
+  "browser_action": {
+    "default_title": "Recipe Filter",
+    "default_icon": "img/icon-128.png"
+  },
   "content_scripts": [
     {
       "matches": [
