@@ -4,6 +4,8 @@
 
 ## RecipeFilter Chrome Extension
 
+[Quick video tutorial video here if you want to see it in action](https://www.youtube.com/watch?v=3Xq1p10f3v4).
+
 This Chrome plugin helps cut through to the chase when browsing food blogs. It is born out of my frustration in having to scroll through a prolix life story before getting to the recipe card that I really want to check out.
 
 It works by identifying recipes in websites that conform to some common patterns. It brings a copy of the recipe card front-and-center and includes a button to dismiss it so you can see the full site. It works in concert with bookmarklets that can save to your favorite recipe manager (i.e. Paprika).
@@ -12,9 +14,13 @@ It works by identifying recipes in websites that conform to some common patterns
 
 ### Installing
 
-The fastest way to try it out is to directly install the latest CRX from Github [by clicking here](https://raw.githubusercontent.com/sean-public/RecipeFilter/master/RecipeFilter.crx).
+Install it using the Google Web Store [here](https://chrome.google.com/webstore/detail/recipe-filter/ahlcdjbkdaegmljnnncfnhiioiadakae).
 
-Once out of beta testing, you will be able to install from the [Google Web Store](https://chrome.google.com/webstore/category/extensions).
+
+
+### Developing
+
+You can clone this repo and load the unpacked extension in Chrome if you plan on doing some development. Please fork and submit a change request if you have added features or file an issue if you have a problem to report.
 
 
 
