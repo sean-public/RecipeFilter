@@ -3,6 +3,7 @@ recipe_selectors = [
 	'.tasty-recipes',
 	'.easyrecipe',
 	'.innerrecipe',
+	'.recipe-summary.wide', // thepioneerwoman.com
 	'.wprm-recipe-container',
 	'.recipe-content',
 	'div[itemtype="http://schema.org/Recipe"]',
