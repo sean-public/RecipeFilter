@@ -10,6 +10,14 @@ It works by identifying recipes in websites that conform to some common patterns
 
 
 
+### Donating
+
+If you would like to throw some dollars my way to say thank you or to encourage investing more development time to the extension, please donate on Liberapay:
+
+<p align="center">[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/liberapay/donate)</p>
+
+
+
 ### Installing
 
 Install it using the Google Web Store [here](https://chrome.google.com/webstore/detail/recipe-filter/ahlcdjbkdaegmljnnncfnhiioiadakae).
@@ -18,7 +26,7 @@ Install it using the Google Web Store [here](https://chrome.google.com/webstore/
 
 ### Example Screenshot
 
-![](https://i.imgur.com/qa8Fj6l.png)
+<p align="center">![](https://i.imgur.com/qa8Fj6l.png)</p>
 
 
 
