@@ -1,14 +1,20 @@
-<p align="center">
-  <img src="src/img/icon-128.png" width="100">
-</p>
+<p align="center"><img src="src/img/icon-128.png" width="100"></p>
 
 ## RecipeFilter Chrome Extension
 
 [Quick video tutorial video here if you want to see it in action](https://www.youtube.com/watch?v=3Xq1p10f3v4).
 
-This Chrome plugin helps cut through to the chase when browsing food blogs. It is born out of my frustration in having to scroll through a prolix life story before getting to the recipe card that I really want to check out.
+This Chrome browser extension helps cut through to the chase when browsing food blogs. It is born out of my frustration in having to scroll through a prolix life story before getting to the recipe card that I really want to check out.
 
 It works by identifying recipes in websites that conform to some common patterns. It brings a copy of the recipe card front-and-center and includes a button to dismiss it so you can see the full site. It works in concert with bookmarklets that can save to your favorite recipe manager (i.e. Paprika).
+
+
+
+### Donating
+
+If you would like to throw some dollars my way to say thank you or to encourage investing more development time to the extension, please donate on Liberapay:
+
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/fancy_pantser/donate)
 
 
 
@@ -18,9 +24,13 @@ Install it using the Google Web Store [here](https://chrome.google.com/webstore/
 
 
 
-### Developing
+### Example Screenshot
 
-You can clone this repo and load the unpacked extension in Chrome if you plan on doing some development. Please fork and submit a change request if you have added features or file an issue if you have a problem to report.
+![](https://i.imgur.com/qa8Fj6l.png)
+
+
+
+This site has several pages of text and images before getting to the recipe. With RecipeFilter, the actual recipe is shown at the top of the page when you load it. The contents and formatting are not changed; they are how the author intended. You can dismiss the modal and see the full original site.
 
 
 
@@ -36,7 +46,7 @@ If you click on the extension icon in the toolbar and select "Options", you will
 
 
 
-<img src="img/options.png" width="500">
+<p align="center"><img src="img/options.png" width="500"></p>
 
 
 
@@ -50,10 +60,3 @@ Fork this repo and load it as an unpacked extension. Push your changes and submi
 - It's installed and running! Load a long-winded recipe page to test it out ([example](https://www.gimmesomeoven.com/instant-pot-steamed-artichokes/))
 - As you make changes, just hit "refresh" on the Extensions settings page to reload the plugin.
 
-### 
-
-### Example Screenshots
-
-
-
-![before and after screenshots](img/before_and_after.png)
