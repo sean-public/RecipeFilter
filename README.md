@@ -14,9 +14,7 @@ It works by identifying recipes in websites that conform to some common patterns
 
 If you would like to throw some dollars my way to say thank you or to encourage investing more development time to the extension, please donate on Liberapay:
 
-<p align="center">
 [![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/fancy_pantser/donate)
-</p>
 
 
 
