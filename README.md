@@ -26,7 +26,7 @@ Install it using the Google Web Store [here](https://chrome.google.com/webstore/
 
 ### Example Screenshot
 
-<p align="center">![](https://i.imgur.com/qa8Fj6l.png)</p>
+![](https://i.imgur.com/qa8Fj6l.png)
 
 
 
