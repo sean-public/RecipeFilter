@@ -10,7 +10,9 @@
     "storage",
     "contextMenus"
   ],
-  "options_page": "html/options.html",
+  "options_ui": {
+    "page": "html/options.html"
+  },
   "browser_action": {
     "default_title": "Recipe Filter",
     "default_icon": "img/icon-128.png"
