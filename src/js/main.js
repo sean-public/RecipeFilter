@@ -55,7 +55,7 @@ function showPopup(){
 
 // check the blacklist to see if we should run on this site
 chrome.storage.sync.get(document.location.hostname, function(items) {
-	if (!(document.location.hostname in items)) {
+	if (items === undefined or !(document.location.hostname in items)) {
 		showPopup();
 	}
 });
