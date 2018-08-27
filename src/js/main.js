@@ -6,6 +6,7 @@ recipe_selectors = [
 	'.recipe-summary.wide', // thepioneerwoman.com
 	'.wprm-recipe-container',
 	'.recipe-content',
+	'.simple-recipe-pro',
 	'div[itemtype="http://schema.org/Recipe"]',
 	'div[itemtype="https://schema.org/Recipe"]',
 ]
