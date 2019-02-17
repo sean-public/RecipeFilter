@@ -9,6 +9,8 @@ recipe_selectors = [
 	'.simple-recipe-pro',
 	'div[itemtype="http://schema.org/Recipe"]',
 	'div[itemtype="https://schema.org/Recipe"]',
+	'.recipe',
+	'.mv-create-card',
 ]
 
 
