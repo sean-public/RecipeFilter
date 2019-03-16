@@ -11,6 +11,13 @@ recipe_selectors = [
 	'div[itemtype="https://schema.org/Recipe"]',
 ]
 
+const controls = `
+	<div id="_rf_header">
+		<button id="_rf_closebtn" class="_rfbtn">close recipe</button>
+		RecipeFilter
+		<button id="_rf_disablebtn" class="_rfbtn">disable on this site</button>
+	</div>
+`
 
 function hidePopup(){
 	$('#_rf_highlight').fadeOut();
@@ -21,13 +28,7 @@ function showPopup(){
 		$r = $(s);
 		if ($r.length === 1){
 			// clone the matched element and add some control buttons
-			$r.clone().attr('id', '_rf_highlight').prependTo('body').append(`
-				<div id="_rf_header">
-					<button id="_rf_closebtn" class="_rfbtn">close recipe</button>
-					RecipeFilter
-					<button id="_rf_disablebtn" class="_rfbtn">disable on this site</button>
-				</div>
-			`).fadeIn(500);
+			$r.clone().attr('id', '_rf_highlight').prependTo('body').append(controls).fadeIn(500);
 
 			// handle the two new buttons we attached to the popup
 			$('#_rf_closebtn').click(hidePopup);
