@@ -31,13 +31,27 @@ function showPopup(){
 			$r.clone().attr('id', '_rf_highlight').prependTo('body').append(controls).fadeIn(500);
 
 			// handle the two new buttons we attached to the popup
-			$('#_rf_closebtn').on('click touchstart', function() { hidePopup() });
+			$('#_rf_closebtn').on('click touchstart', function() { 
+				
+				e.stopPropagation();
+				e.preventDefault();
+			
+				hidePopup() 
+			});
 			$('#_rf_disablebtn').on('click touchstart', function(){
+				
+				e.stopPropagation();
+				e.preventDefault();
+				
 				chrome.storage.sync.set({[document.location.hostname]: true}, hidePopup);
 			});
 
 			// add an event listener for clicking outside the recipe to close it
 			$(document).on('mouseup touchend', function(e){
+				
+				e.stopPropagation();
+				e.preventDefault();
+				
 				var container = $('#_rf_highlight');
 				if (!container.is(e.target) && container.has(e.target).length === 0) 
 				{
