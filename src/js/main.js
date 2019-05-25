@@ -28,7 +28,7 @@ function showPopup(){
 		$r = $(s);
 		if ($r.length === 1){
 			// clone the matched element and add some control buttons
-			$r.clone().attr('id', '_rf_highlight').prependTo('body').append(controls).fadeIn(500);
+			$r.clone().attr('id', '_rf_highlight').prepend(controls).prependTo('body').append(controls).fadeIn(500);
 
 			// handle the two new buttons we attached to the popup
 			$('#_rf_closebtn').click(hidePopup);
@@ -45,6 +45,17 @@ function showPopup(){
 				    $(document).unbind('mouseup');
 				}
 			});
+
+			//event listener to close recipe on esc key
+			$(document).keyup(function(e) {
+				var container = $('#_rf_highlight');
+				if (e.key === "Escape") {
+					if (!container.is(e.target) && container.has(e.target).length === 0) 
+					{
+						hidePopup();
+					}
+			   }
+		   });
 
 			// scroll to top in case they hit refresh while lower in page
 			$(window).scrollTop(0);
