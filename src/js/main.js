@@ -11,43 +11,67 @@ recipe_selectors = [
 	'div[itemtype="https://schema.org/Recipe"]',
 ]
 
-const controls = `
-	<div id="_rf_header">
-		<button id="_rf_closebtn" class="_rfbtn">close recipe</button>
-		RecipeFilter
-		<button id="_rf_disablebtn" class="_rfbtn">disable on this site</button>
-	</div>
-`
+const closeButton = document.createElement('button');
+closeButton.id = '_rf_closebtn';
+closeButton.classList.add('_rfbtn');
+closeButton.textContent = 'close recipe';
+
+const disableButton = document.createElement('button');
+disableButton.id = '_rf_disablebtn';
+disableButton.classList.add('_rfbtn');
+disableButton.textContent = 'disable on this site';
+
+const controls = document.createElement('div');
+controls.id  = '_rf_header';
+controls.appendChild(closeButton);
+controls.appendChild(document.createTextNode('RecipeFilter'));
+controls.appendChild(disableButton);
 
 function hidePopup(){
-	$('#_rf_highlight').fadeOut();
+	let highlight = document.getElementById('_rf_highlight');
+	highlight.style.transition = 'opacity 400ms';
+	highlight.style.opacity = 0;
 }
 
 function showPopup(){
 	recipe_selectors.every(function(s){
-		$r = $(s);
-		if ($r.length === 1){
-			// clone the matched element and add some control buttons
-			$r.clone().attr('id', '_rf_highlight').prependTo('body').append(controls).fadeIn(500);
+		let original = document.querySelector(s);
+		if (original){
+			// clone the matched element
+			let clone = original.cloneNode(true);
+			clone.id = '_rf_highlight';
+			// add some control buttons
+			clone.appendChild(controls);
+			clone.style.transition = 'opacity 500ms';
+			clone.style.display = 'block';
+			clone.style.opacity = 0;
+
+			document.body.insertBefore(clone, document.body.firstChild);
 
 			// handle the two new buttons we attached to the popup
-			$('#_rf_closebtn').click(hidePopup);
-			$('#_rf_disablebtn').click(function(b){
+			closeButton.addEventListener('click', hidePopup);
+			disableButton.addEventListener('click', function(b){
 				chrome.storage.sync.set({[document.location.hostname]: true}, hidePopup);
 			});
 
 			// add an event listener for clicking outside the recipe to close it
-			$(document).mouseup(function(e) {
-				var container = $('#_rf_highlight');
-				if (!container.is(e.target) && container.has(e.target).length === 0) 
+			let mouseUpHide = function(e) {
+				if (e.target !== clone && !clone.contains(e.target)) 
 				{
 				    hidePopup();
-				    $(document).unbind('mouseup');
+				    document.removeEventListener('mouseup', mouseUpHide);
 				}
-			});
+			};
+			document.addEventListener('mouseup', mouseUpHide);
 
-			// scroll to top in case they hit refresh while lower in page
-			$(window).scrollTop(0);
+			window.setTimeout(() => {
+				// fade in
+				clone.style.opacity = 1;
+
+				// scroll to top in case they hit refresh while lower in page
+				document.scrollingElement.scrollTop = 0;
+			}, 10);
+
 			// it worked, stop iterating through recipe_selectors
 			return false;
 		}
