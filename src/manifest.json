@@ -21,7 +21,7 @@
         "http://*/*", "https://*/*"
       ],
       "css": ["css/recipe_filter.css"],
-      "js": ["js/jquery-3.2.1.min.js", "js/main.js"]
+      "js": ["js/main.js"]
     }
   ]
 }
