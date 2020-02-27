@@ -6,15 +6,7 @@
 
 This Chrome browser extension helps cut through to the chase when browsing food blogs. It is born out of my frustration in having to scroll through a prolix life story before getting to the recipe card that I really want to check out.
 
-It works by identifying recipes in websites that conform to some common patterns. It brings a copy of the recipe card front-and-center and includes a button to dismiss it so you can see the full site. It works in concert with bookmarklets that can save to your favorite recipe manager (i.e. Paprika).
-
-
-
-### Donating
-
-If you would like to throw some dollars my way to say thank you or to encourage investing more development time to the extension, please donate on Liberapay:
-
-[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/fancy_pantser/donate)
+It works by identifying recipes in websites that conform to some common patterns. It brings a copy of the recipe card front-and-center and includes a button to dismiss it so you can see the full site. It works in concert with bookmarklets that can save to your favorite recipe manager (i.e. Paprika Recipe Manager 3).
 
 
 
