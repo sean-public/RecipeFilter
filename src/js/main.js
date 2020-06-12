@@ -56,7 +56,7 @@ function showPopup(){
 
 			// add an event listener for clicking outside the recipe to close it
 			let mouseUpHide = function(e) {
-				if (e.target !== clone && !clone.contains(e.target)) 
+				if (e.target !== clone && !clone.contains(e.target) && event.target.type !== 'submit')
 				{
 				    hidePopup();
 				    document.removeEventListener('mouseup', mouseUpHide);
