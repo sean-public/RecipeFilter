@@ -8,8 +8,7 @@
           "128": "img/icon-128.png"
   },
   "permissions": [
-    "storage",
-    "contextMenus"
+    "storage"
   ],
   "options_page": "html/options.html",
   "browser_action": {
