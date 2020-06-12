@@ -24,7 +24,7 @@ disableButton.textContent = 'disable on this site';
 const controls = document.createElement('div');
 controls.id  = '_rf_header';
 controls.appendChild(closeButton);
-controls.appendChild(document.createTextNode('RecipeFilter'));
+controls.appendChild(document.createTextNode('Recipe Filter'));
 controls.appendChild(disableButton);
 
 function hidePopup(){
@@ -41,7 +41,7 @@ function showPopup(){
 			let clone = original.cloneNode(true);
 			clone.id = '_rf_highlight';
 			// add some control buttons
-			clone.appendChild(controls);
+			clone.prepend(controls);
 			clone.style.transition = 'opacity 500ms';
 			clone.style.display = 'block';
 			clone.style.opacity = 0;

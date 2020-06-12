@@ -15,19 +15,26 @@
 
 #_rf_header {
 	display: block;
-	padding: 8px;
+	padding: 12px 8px;
 	margin: 0;
-	color: rgba(100, 200, 100, 0.7);
-	background: rgba(100, 200, 100, 0.3);
-	font-size: 14px;
+	color: rgba(0, 0, 0, 0.8);
+	background: rgba(100, 200, 100, 0.2);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
 	font-weight: bold;
-	text-align: center;
+	text-align: left;
+	border-bottom: 1px solid #eee;
 }
 
 ._rfbtn {
 	color: black;
 	font-size: 100%;
-	background-color: #eee;
+	font-weight: normal;
+	background-color: #f8f8f8;
+	border: 1px solid #aba;
 	padding: 2px 8px;
 	margin: 0 8px;
+	min-width: 130px;
+	text-decoration: none;
+	float: right;
 }
