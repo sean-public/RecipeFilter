@@ -7,6 +7,7 @@ recipe_selectors = [
 	'.wprm-recipe-container',
 	'.recipe-content',
 	'.simple-recipe-pro',
+	'.mv-recipe-card',
 	'div[itemtype="http://schema.org/Recipe"]',
 	'div[itemtype="https://schema.org/Recipe"]',
 ]
@@ -58,8 +59,8 @@ function showPopup(){
 			let mouseUpHide = function(e) {
 				if (e.target !== clone && !clone.contains(e.target) && event.target.type !== 'submit')
 				{
-				    hidePopup();
-				    document.removeEventListener('mouseup', mouseUpHide);
+						hidePopup();
+						document.removeEventListener('mouseup', mouseUpHide);
 				}
 			};
 			document.addEventListener('mouseup', mouseUpHide);
