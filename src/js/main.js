@@ -34,6 +34,18 @@ function hidePopup(){
 	highlight.style.opacity = 0;
 }
 
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.action == "reshow_popup")
+			reshowPopup();
+      sendResponse({farewell: "goodbye"});
+  });
+
+function reshowPopup() {
+	let existingPopup = document.getElementById('_rf_highlight');
+	existingPopup.style.opacity = 1;
+}
+
 function showPopup(){
 	recipe_selectors.every(function(s){
 		let original = document.querySelector(s);
