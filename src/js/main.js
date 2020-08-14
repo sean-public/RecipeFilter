@@ -35,10 +35,10 @@ function hidePopup(){
 }
 
 chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
+  function(request) {
     if (request.action == "reshow_popup")
 			reshowPopup();
-      sendResponse({farewell: "goodbye"});
+      //sendResponse({farewell: "goodbye"});
   });
 
 function reshowPopup() {
