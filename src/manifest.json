@@ -3,7 +3,7 @@
   "name": "Recipe Filter",
   "short_name": "Recipe Filter",
   "version": "0.3",
-  "description": "Recipe Filter seeks out recipes buried in pages and shows them to you in a handy popup.",
+  "description": "Recipe Filter shows recipes found anywhere on the web in a handy popup.",
   "icons": {
           "128": "img/icon-128.png"
   },
