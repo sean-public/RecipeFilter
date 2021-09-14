@@ -32,6 +32,10 @@ function hidePopup(){
 	let highlight = document.getElementById('_rf_highlight');
 	highlight.style.transition = 'opacity 400ms';
 	highlight.style.opacity = 0;
+
+	setTimeout(function() {
+		highlight.style.display = 'none';
+	}, 400);
 }
 
 function showPopup(){
