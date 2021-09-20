@@ -34,7 +34,7 @@ function hidePopup(){
 	highlight.style.opacity = 0;
 
 	setTimeout(function() {
-		highlight.style.display = 'none';
+		highlight.parentNode.removeChild(highlight);
 	}, 400);
 }
 
