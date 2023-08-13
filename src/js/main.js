@@ -69,6 +69,15 @@ function showPopup(){
 			};
 			document.addEventListener('mouseup', mouseUpHide);
 
+			// add an event listener for closing the dialog by hitting 'escape'
+			const escapeUpHide = function (e) {
+				if (e.key === 'Escape') {
+					hidePopup()
+					document.removeEventListener('keyup', escapeUpHide)
+				}
+			}
+			document.addEventListener('keyup', escapeUpHide)
+
 			window.setTimeout(() => {
 				// fade in
 				clone.style.opacity = 1;
