@@ -8,12 +8,14 @@
           "128": "img/icon-128.png"
   },
   "permissions": [
+    "contextMenus",
     "storage"
   ],
   "options_page": "html/options.html",
   "browser_action": {
     "default_title": "Recipe Filter",
     "default_icon": "img/icon-128.png"
+
   },
   "content_scripts": [
     {
@@ -23,5 +25,8 @@
       "css": ["css/recipe_filter.css"],
       "js": ["js/main.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  }
 }
