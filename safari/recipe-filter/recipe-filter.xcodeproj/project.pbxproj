@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,7 @@
 		127D5E1C25DCD88600D9149F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127D5E1A25DCD88600D9149F /* Main.storyboard */; };
 		127D5E1E25DCD88600D9149F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D5E1D25DCD88600D9149F /* ViewController.swift */; };
 		127D5E2025DCD88600D9149F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127D5E1F25DCD88600D9149F /* Assets.xcassets */; };
-		127D5E2725DCD88600D9149F /* recipe-filter Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 127D5E2625DCD88600D9149F /* recipe-filter Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		127D5E2725DCD88600D9149F /* recipe-filter Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 127D5E2625DCD88600D9149F /* recipe-filter Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		127D5E2C25DCD88600D9149F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127D5E2B25DCD88600D9149F /* Cocoa.framework */; };
 		127D5E2F25DCD88600D9149F /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D5E2E25DCD88600D9149F /* SafariWebExtensionHandler.swift */; };
 		127D5E4125DCD88600D9149F /* css in Resources */ = {isa = PBXBuildFile; fileRef = 127D5E3C25DCD88600D9149F /* css */; };
@@ -32,15 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		127D5E3725DCD88600D9149F /* Embed App Extensions */ = {
+		127D5E3725DCD88600D9149F /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				127D5E2725DCD88600D9149F /* recipe-filter Extension.appex in Embed App Extensions */,
+				127D5E2725DCD88600D9149F /* recipe-filter Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -158,7 +158,7 @@
 				127D5E1025DCD88600D9149F /* Sources */,
 				127D5E1125DCD88600D9149F /* Frameworks */,
 				127D5E1225DCD88600D9149F /* Resources */,
-				127D5E3725DCD88600D9149F /* Embed App Extensions */,
+				127D5E3725DCD88600D9149F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -193,8 +193,9 @@
 		127D5E0C25DCD88600D9149F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					127D5E1325DCD88600D9149F = {
 						CreatedOnToolsVersion = 12.4;
@@ -321,9 +322,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -382,9 +385,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -407,6 +412,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "recipe-filter Extension/recipe_filter_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WJTP6P8PU4;
 				INFOPLIST_FILE = "recipe-filter Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,7 +420,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.recipe-filter.Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -427,6 +433,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "recipe-filter Extension/recipe_filter_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WJTP6P8PU4;
 				INFOPLIST_FILE = "recipe-filter Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,7 +441,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.recipe-filter.Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -449,15 +456,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "recipe-filter/recipe_filter.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WJTP6P8PU4;
 				INFOPLIST_FILE = "recipe-filter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.recipe-filter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -471,15 +480,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "recipe-filter/recipe_filter.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WJTP6P8PU4;
 				INFOPLIST_FILE = "recipe-filter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.recipe-filter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

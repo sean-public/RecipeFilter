@@ -10,6 +10,7 @@ recipe_selectors = [
 	'.mv-recipe-card',
 	'div[itemtype="http://schema.org/Recipe"]',
 	'div[itemtype="https://schema.org/Recipe"]',
+    'div.recipediv',
 ]
 
 const closeButton = document.createElement('button');
@@ -47,9 +48,10 @@ function showPopup(){
 			clone.id = '_rf_highlight';
 			// add some control buttons
 			clone.prepend(controls);
-			clone.style.transition = 'opacity 500ms';
+            clone.style.transition = 'opacity 500ms';
 			clone.style.display = 'block';
 			clone.style.opacity = 0;
+            clone.setAttribute('aria-live', 'assertive');
 
 			document.body.insertBefore(clone, document.body.firstChild);
 
@@ -69,6 +71,15 @@ function showPopup(){
 			};
 			document.addEventListener('mouseup', mouseUpHide);
 
+            // another listener that hides when escape is pressed
+            const escapeUpHide = function (e) {
+                if (e.key === 'Escape') {
+                    hidePopup();
+                    document.removeEventListener('keyup', escapeUpHide);
+                }
+            }
+            document.addEventListener('keyup', escapeUpHide)
+            
 			window.setTimeout(() => {
 				// fade in
 				clone.style.opacity = 1;
