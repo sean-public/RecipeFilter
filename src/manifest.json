@@ -1,17 +1,17 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Recipe Filter",
-  "short_name": "Recipe Filter",
+  "short_name": "RecipeFilter",
   "version": "0.3",
   "description": "Recipe Filter shows recipes found anywhere on the web in a handy popup.",
   "icons": {
-          "128": "img/icon-128.png"
+    "128": "img/icon-128.png"
   },
   "permissions": [
     "storage"
   ],
   "options_page": "html/options.html",
-  "browser_action": {
+  "action": {
     "default_title": "Recipe Filter",
     "default_icon": "img/icon-128.png"
   },
@@ -23,5 +23,6 @@
       "css": ["css/recipe_filter.css"],
       "js": ["js/main.js"]
     }
-  ]
+  ],
+  "content_security_policy": {}
 }
