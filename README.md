@@ -18,8 +18,7 @@ Install it using the Google Web Store [here](https://chrome.google.com/webstore/
 
 ### Example Screenshot
 
-![](https://i.imgur.com/qa8Fj6l.png)
-
+<p align="center"><img src="img/example.jpg" width="700"></p>
 
 
 This site has several pages of text and images before getting to the recipe. With RecipeFilter, the actual recipe is shown at the top of the page when you load it. The contents and formatting are not changed; they are how the author intended. You can dismiss the modal and see the full original site.
@@ -51,4 +50,3 @@ Fork this repo and load it as an unpacked extension. Push your changes and submi
 - Click `Load unpacked extension...` and select the `src` folder that contains `manifest.json`.
 - It's installed and running! Load a long-winded recipe page to test it out ([example](https://www.gimmesomeoven.com/instant-pot-steamed-artichokes/))
 - As you make changes, just hit "refresh" on the Extensions settings page to reload the plugin.
-
